@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Recipe Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="images/food-banner.jpg" alt="" class="header-img">
+        <h1 >🍜 Delicious Recipe Finder 🍴</h1>
+        <p>Find your favorite recipes with just a few clicks and discover new ones!</p>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <input type="text" id="search" placeholder="Enter an ingredient...">
+            <button onclick="getRecipes()">Search</button>
+        </section>
+
+        <section class="results-section">
+            <h2>Search Results</h2>
+            <div class="recipes" id="recipes">
+                <p>Search for recipes to see results here.</p>
+            </div>
+        </section>
+
+        <section class="favorites-section" id="favorites-section">
+            <h2>Your Favorite Recipes</h2>
+            <div class="recipes" id="favorites">
+                <p>No favorites added yet.</p>
+            </div>
+        </section>
+
+        <!-- Recipe Details Modal -->
+        <div id="recipe-modal" class="recipe-modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="recipe-title"></h2>
+                <img id="recipe-img" src="" alt="Recipe Image">
+                <p id="recipe-instructions"></p>
+                <a href="" id="recipe-youtube" target="_blank">Watch Recipe Video</a>
+                <button id="favorite-btn" class="favorite">Add to Favorites</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Sidebar for Recent Searches -->
+    <div class="sidebar">
+        <h2>Recent Searches</h2>
+        <div id="recent-searches">
+            <p>No recent searches.</p>
+        </div>
+       
+        
+    </div>
+
+    <footer>
+        <p>© 2025 Delicious Recipe Finder | Designed with ❤ for food lovers.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>      
